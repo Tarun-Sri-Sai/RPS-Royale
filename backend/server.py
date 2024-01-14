@@ -8,7 +8,7 @@ CORS(app)
 
 
 @app.route('/get-png/<string:png_name>', methods=['GET'])
-def fetch_google_drive(png_name: str):
+def get_png_endpoint(png_name: str):
     png_paths = {
         x.lower(): join('assets', f'{x}.png') for x in ['Rock', 'Paper', 'Scissors']
     }
