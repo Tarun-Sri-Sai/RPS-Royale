@@ -2,6 +2,7 @@
 
 let flock;
 let constants;
+let isPaused = true;
 
 function preload() {
   loadConstants();
@@ -17,10 +18,19 @@ function draw() {
   background(constants.BACKGROUND_GRAYSCALE);
   frameRate(constants.FRAMERATE);
 
+  if (isPaused) {
+    flock.display();
+    return;
+  }
+
   flock.update();
   flock.display();
 
   if (flock.isSame()) {
     noLoop();
   }
+}
+
+function toggleSimulation() {
+  isPaused = !isPaused;
 }
