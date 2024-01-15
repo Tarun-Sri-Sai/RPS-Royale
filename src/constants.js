@@ -6,7 +6,7 @@ function loadConstants() {
   if (window.screen.width <= 600) {
     CANVAS_WIDTH = Math.round((5 * window.screen.width) / 6);
     CANVAS_HEIGHT = Math.round((7 * CANVAS_WIDTH) / 5);
-    PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 5000)
+    PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 1500)
   } else {
     CANVAS_WIDTH = Math.round((3 * window.screen.width) / 5);
     CANVAS_HEIGHT = Math.round((3 * CANVAS_WIDTH) / 5);
