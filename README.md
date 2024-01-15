@@ -4,4 +4,4 @@ A live simulation of a battle royale between Rock, Paper and Scissors.
 
 ## Usage
 
-Open `frontend/index.html` in a browser.
+Open `index.html` in a browser.

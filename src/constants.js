@@ -6,7 +6,7 @@ function loadConstants() {
   const CANVAS_WIDTH = 1200;
   const CANVAS_HEIGHT = 600;
 
-  const URL_PREFIX = 'https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/backend/assets'
+  const URL_PREFIX = 'https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/assets'
 
   constants = {
     PARTICLE_RADIUS: PARTICLE_RADIUS,
