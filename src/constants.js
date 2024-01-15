@@ -1,12 +1,20 @@
 function loadConstants() {
   const FRAMERATE = 30;
 
-  const CANVAS_WIDTH = Math.round(3 * window.screen.width / 5);
-  const CANVAS_HEIGHT = Math.round(3 * CANVAS_WIDTH / 5);
+  let CANVAS_WIDTH, CANVAS_HEIGHT;
+
+  if (window.screen.width <= 600) {
+    CANVAS_WIDTH = Math.round((5 * window.screen.width) / 6);
+    CANVAS_HEIGHT = Math.round((7 * CANVAS_WIDTH) / 5);
+  } else {
+    CANVAS_WIDTH = Math.round((3 * window.screen.width) / 5);
+    CANVAS_HEIGHT = Math.round((3 * CANVAS_WIDTH) / 5);
+  }
 
   const PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 15000);
 
-  const URL_PREFIX = 'https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/assets'
+  const URL_PREFIX =
+    "https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/assets";
 
   constants = {
     PARTICLE_RADIUS: PARTICLE_RADIUS,
