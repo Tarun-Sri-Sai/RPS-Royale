@@ -8,7 +8,7 @@ function loadConstants() {
     CANVAS_HEIGHT = Math.round((7 * CANVAS_WIDTH) / 5);
     PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 2500)
 
-    FLOCK_POPULATION = 20
+    FLOCK_POPULATION = 15
   } else {
     CANVAS_WIDTH = Math.round((3 * window.screen.width) / 5);
     CANVAS_HEIGHT = Math.round((3 * CANVAS_WIDTH) / 5);
