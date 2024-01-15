@@ -6,6 +6,8 @@ function loadConstants() {
   const CANVAS_WIDTH = 1200;
   const CANVAS_HEIGHT = 600;
 
+  const URL_PREFIX = 'https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/backend/assets'
+
   constants = {
     PARTICLE_RADIUS: PARTICLE_RADIUS,
     VISIBILITY_RADIUS: PARTICLE_RADIUS * 3,
@@ -18,9 +20,9 @@ function loadConstants() {
     CANVAS_HEIGHT: CANVAS_HEIGHT,
 
     IMAGES: {
-      Rock: loadImage("http://127.0.0.1:5000/get-png/rock"),
-      Paper: loadImage("http://127.0.0.1:5000/get-png/paper"),
-      Scissors: loadImage("http://127.0.0.1:5000/get-png/scissors"),
+      Rock: loadImage(`${URL_PREFIX}/Rock.png`),
+      Paper: loadImage(`${URL_PREFIX}/Paper.png`),
+      Scissors: loadImage(`${URL_PREFIX}/Scissors.png`),
     },
     BACKGROUND_GRAYSCALE: 220,
 
