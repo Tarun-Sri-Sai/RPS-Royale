@@ -3,8 +3,8 @@ function loadConstants() {
 
   const FRAMERATE = 30;
 
-  const CANVAS_WIDTH = 1200;
-  const CANVAS_HEIGHT = 600;
+  const CANVAS_WIDTH = Math.round(3 * window.screen.width / 5);
+  const CANVAS_HEIGHT = Math.round(3 * CANVAS_WIDTH / 5);
 
   const URL_PREFIX = 'https://raw.githubusercontent.com/Tarun-Sri-Sai/RPS-Royale/main/assets'
 
