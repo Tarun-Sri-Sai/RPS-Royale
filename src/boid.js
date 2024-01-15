@@ -121,7 +121,7 @@ class Boid {
 
     for (const boid of boids) {
       const difference = p5.Vector.sub(this.position, boid.position);
-      difference.div(Math.max(this.getDistance(boid), 1e-6) ** 1.5);
+      difference.div(1.01 ** Math.max(this.getDistance(boid), 1e-6));
 
       averagePosition.add(difference);
     }
