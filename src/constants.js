@@ -1,16 +1,20 @@
 function loadConstants() {
   const FRAMERATE = 30;
 
-  let CANVAS_WIDTH, CANVAS_HEIGHT, PARTICLE_RADIUS;
+  let CANVAS_WIDTH, CANVAS_HEIGHT, PARTICLE_RADIUS, FLOCK_POPULATION;
 
   if (window.screen.width <= 600) {
     CANVAS_WIDTH = Math.round((5 * window.screen.width) / 6);
     CANVAS_HEIGHT = Math.round((7 * CANVAS_WIDTH) / 5);
-    PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 1500)
+    PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 2500)
+
+    FLOCK_POPULATION = 20
   } else {
     CANVAS_WIDTH = Math.round((3 * window.screen.width) / 5);
     CANVAS_HEIGHT = Math.round((3 * CANVAS_WIDTH) / 5);
     PARTICLE_RADIUS = Math.round((CANVAS_HEIGHT * CANVAS_WIDTH) / 15000)
+
+    FLOCK_POPULATION = 25
   }
 
   const URL_PREFIX =
@@ -34,7 +38,7 @@ function loadConstants() {
     },
     BACKGROUND_GRAYSCALE: 220,
 
-    FLOCK_POPULATION: 25,
+    FLOCK_POPULATION: FLOCK_POPULATION,
 
     FRAMERATE: FRAMERATE,
 
