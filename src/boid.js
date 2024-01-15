@@ -89,7 +89,6 @@ class Boid {
       }
     }
 
-    this.acceleration.add(this.align(targetBoids));
     this.acceleration.add(this.cohere(targetBoids));
     this.acceleration.add(this.separate(friendlyBoids));
   }
@@ -98,22 +97,6 @@ class Boid {
     vector.setMag(constants.VELOCITY_LIMIT);
     vector.sub(this.velocity);
     return vector.limit(constants.ACCELERATION_LIMIT);
-  }
-
-  align(boids) {
-    const averageVelocity = createVector();
-
-    for (const boid of boids) {
-      averageVelocity.add(boid.velocity);
-    }
-
-    const length = boids.length;
-    if (length === 0) {
-      return averageVelocity;
-    }
-
-    averageVelocity.div(length);
-    return this.scale(averageVelocity);
   }
 
   cohere(boids) {
