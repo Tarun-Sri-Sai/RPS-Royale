@@ -43,17 +43,17 @@ class Boid {
   }
 
   fitScreen() {
-    if (this.position.x - constants.PARTICLE_RADIUS < 0) {
-      this.velocity.x = constants.VELOCITY_LIMIT;
+    if (this.position.x < 0) {
+      this.position.x  = constants.CANVAS_WIDTH;
     }
-    if (this.position.x + constants.PARTICLE_RADIUS > width) {
-      this.velocity.x = -constants.VELOCITY_LIMIT;
+    if (this.position.x > constants.CANVAS_WIDTH) {
+      this.position.x = 0;
     }
-    if (this.position.y - constants.PARTICLE_RADIUS < 0) {
-      this.velocity.y = constants.VELOCITY_LIMIT;
+    if (this.position.y < 0) {
+      this.position.y = constants.CANVAS_HEIGHT;
     }
-    if (this.position.y + constants.PARTICLE_RADIUS > height) {
-      this.velocity.y = -constants.VELOCITY_LIMIT;
+    if (this.position.y > constants.CANVAS_HEIGHT) {
+      this.position.y = 0;
     }
   }
 
