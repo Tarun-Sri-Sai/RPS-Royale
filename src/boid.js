@@ -84,7 +84,7 @@ class Boid {
       }
       if (constants.TARGETS[this.id] === boid.id) {
         targetBoids.push(boid);
-      } else if (this.id === boid.id) {
+      } else {
         friendlyBoids.push(boid);
       }
     }
