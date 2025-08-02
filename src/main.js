@@ -1,6 +1,6 @@
 "use strict";
 
-let flock;
+let game;
 let constants;
 let isPaused = true;
 let isOver = false;
@@ -13,7 +13,7 @@ function setup() {
   const canvas = createCanvas(constants.CANVAS_WIDTH, constants.CANVAS_HEIGHT);
   canvas.parent("canvas-container");
 
-  flock = new Flock();
+  game = new Game();
 }
 
 function draw() {
@@ -21,14 +21,14 @@ function draw() {
   frameRate(constants.FRAMERATE);
 
   if (isPaused) {
-    flock.display();
+    game.display();
     return;
   }
 
-  flock.update();
-  flock.display();
+  game.update();
+  game.display();
 
-  if (flock.isSame()) {
+  if (game.isSame()) {
     noLoop();
 
     isOver = true;
